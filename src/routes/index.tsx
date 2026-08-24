@@ -189,6 +189,21 @@ const GALLERY = [
   { label: "Foto de detalhe, acessórios", span: "aspect-square" },
 ];
 
+const TEAM = [
+  {
+    name: "Filipa Leal",
+    role: "Fundadora & Professora de Pilates",
+    bio: "Fisioterapeuta de formação e apaixonada pelo método clássico. Acompanha cada aluno com atenção clínica e pedagógica, desenhando aulas seguras, progressivas e adaptadas aos objetivos de cada um.",
+    photo: "Foto da Filipa",
+  },
+  {
+    name: "Placeholder",
+    role: "Professor(a) de Pilates",
+    bio: "Breve descrição do membro da equipa, formação, especialidade e abordagem às aulas.",
+    photo: "Foto do membro da equipa",
+  },
+];
+
 function Stars({ className }: { className?: string }) {
   return (
     <div className={className} aria-label="Classificação 5 estrelas">
@@ -215,6 +230,7 @@ function Home() {
         <Testimonials />
         <Faq />
         <Team />
+        <Vacancies />
         <Contacts />
       </main>
       <Footer />
@@ -558,6 +574,41 @@ function Faq() {
 function Team() {
   return (
     <Section id="equipa" className="bg-cream">
+      <Reveal>
+        <SectionHeading
+          eyebrow="A nossa equipa"
+          title="Quem acompanha cada movimento"
+          intro="Profissionais qualificados, com olhar atento e uma abordagem próxima, para que cada aula seja segura, eficaz e personalizada."
+        />
+      </Reveal>
+      <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {TEAM.map((member, index) => (
+          <Reveal key={member.name} delay={index * 90}>
+            <article className="flex h-full flex-col border border-border bg-card">
+              <ImagePlaceholder
+                label={member.photo}
+                className="aspect-[4/5] w-full rounded-none border-0 border-b border-border"
+              />
+              <div className="flex flex-1 flex-col p-8">
+                <h3 className="text-xl">{member.name}</h3>
+                <p className="mt-1 text-xs tracking-[0.14em] uppercase text-sage-deep">
+                  {member.role}
+                </p>
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
+                  {member.bio}
+                </p>
+              </div>
+            </article>
+          </Reveal>
+        ))}
+      </div>
+    </Section>
+  );
+}
+
+function Vacancies() {
+  return (
+    <Section id="vagas">
       <Reveal>
         <div className="mx-auto max-w-3xl border border-border bg-card p-10 text-center">
           <p className="eyebrow">Junta-te à equipa</p>
