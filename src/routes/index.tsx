@@ -230,6 +230,7 @@ function Home() {
         <Testimonials />
         <Faq />
         <Team />
+        <Vacancies />
         <Contacts />
       </main>
       <Footer />
