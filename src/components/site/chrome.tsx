@@ -16,7 +16,8 @@ const NAV = [
   { href: "#horarios", label: "Horários" },
   { href: "#estudio", label: "Estúdio" },
   { href: "#testemunhos", label: "Testemunhos" },
-  { href: "#equipa", label: "Vagas" },
+  { href: "#equipa", label: "Equipa" },
+  { href: "#vagas", label: "Vagas" },
   { href: "#contactos", label: "Contactos" },
 ];
 
