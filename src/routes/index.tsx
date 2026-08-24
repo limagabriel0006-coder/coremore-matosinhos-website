@@ -189,6 +189,21 @@ const GALLERY = [
   { label: "Foto de detalhe, acessórios", span: "aspect-square" },
 ];
 
+const TEAM = [
+  {
+    name: "Filipa Leal",
+    role: "Fundadora & Professora de Pilates",
+    bio: "Fisioterapeuta de formação e apaixonada pelo método clássico. Acompanha cada aluno com atenção clínica e pedagógica, desenhando aulas seguras, progressivas e adaptadas aos objetivos de cada um.",
+    photo: "Foto da Filipa",
+  },
+  {
+    name: "Placeholder",
+    role: "Professor(a) de Pilates",
+    bio: "Breve descrição do membro da equipa, formação, especialidade e abordagem às aulas.",
+    photo: "Foto do membro da equipa",
+  },
+];
+
 function Stars({ className }: { className?: string }) {
   return (
     <div className={className} aria-label="Classificação 5 estrelas">
