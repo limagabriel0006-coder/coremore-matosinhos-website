@@ -435,9 +435,10 @@ function About() {
           </ul>
         </Reveal>
         <Reveal delay={120} className="grid gap-4">
-          <ImagePlaceholder
-            label="Imagem do estúdio"
-            className="aspect-[4/5] w-full"
+          <img
+            src={galleryVistaGeral.url}
+            alt="Vista geral do estúdio Core&More, com Reformers e luz natural"
+            className="aspect-[4/5] w-full rounded-sm object-cover"
           />
           <ImagePlaceholder label="Foto da equipa" className="aspect-[16/10] w-full" />
         </Reveal>
