@@ -21,6 +21,16 @@ import galleryWundaChair from "@/assets/gallery/estudio-wunda-chair.jpeg.asset.j
 import galleryReformersPlanta from "@/assets/gallery/estudio-reformers-planta.jpeg.asset.json";
 import galleryClassico from "@/assets/gallery/estudio-equipamento-classico.jpeg.asset.json";
 import galleryMatwork from "@/assets/gallery/estudio-matwork-acessorios.jpeg.asset.json";
+import galleryCadillac from "@/assets/gallery/estudio-cadillac.jpeg.asset.json";
+import galleryCadillacExercicio from "@/assets/gallery/estudio-cadillac-exercicio.jpeg.asset.json";
+import galleryReformerFootbar from "@/assets/gallery/estudio-reformer-footbar.jpeg.asset.json";
+import galleryExercicioMolas from "@/assets/gallery/estudio-exercicio-molas.jpeg.asset.json";
+import galleryLadderBarrel from "@/assets/gallery/estudio-ladder-barrel.jpeg.asset.json";
+import galleryShoulderRest from "@/assets/gallery/estudio-reformer-shoulder-rest.jpeg.asset.json";
+import galleryDetalhePega from "@/assets/gallery/estudio-detalhe-pega.jpeg.asset.json";
+import galleryDetalheMolas from "@/assets/gallery/estudio-detalhe-molas.jpeg.asset.json";
+import galleryAcessoriosCesto from "@/assets/gallery/estudio-acessorios-cesto.jpeg.asset.json";
+import galleryRecepcao from "@/assets/gallery/estudio-recepcao-armario.jpeg.asset.json";
 import {
   Accordion,
   AccordionContent,
@@ -211,6 +221,10 @@ const GALLERY = [
     alt: "Sala principal do estúdio, com espelhos amplos",
   },
   {
+    src: galleryCadillac.url,
+    alt: "Cadillac / Trapeze do estúdio",
+  },
+  {
     src: galleryEspelhos.url,
     alt: "Reformers junto à parede de espelhos",
   },
@@ -219,8 +233,36 @@ const GALLERY = [
     alt: "Zona de Reformers do estúdio",
   },
   {
+    src: galleryCadillacExercicio.url,
+    alt: "Aula no Cadillac, exercício com molas",
+  },
+  {
+    src: galleryReformerFootbar.url,
+    alt: "Exercício no Reformer, apoio dos pés na barra",
+  },
+  {
+    src: galleryExercicioMolas.url,
+    alt: "Trabalho de pernas com correias e molas",
+  },
+  {
+    src: galleryLadderBarrel.url,
+    alt: "Exercício de extensão no Ladder Barrel",
+  },
+  {
     src: galleryReformerDetalhe.url,
     alt: "Detalhe do estofo em couro do Reformer",
+  },
+  {
+    src: galleryShoulderRest.url,
+    alt: "Detalhe do apoio de ombros do Reformer",
+  },
+  {
+    src: galleryDetalhePega.url,
+    alt: "Detalhe da pega em madeira e couro",
+  },
+  {
+    src: galleryDetalheMolas.url,
+    alt: "Detalhe das molas do equipamento",
   },
   {
     src: galleryChair.url,
@@ -237,6 +279,14 @@ const GALLERY = [
   {
     src: galleryMatwork.url,
     alt: "Zona de matwork com tapetes, magic circle e acessórios",
+  },
+  {
+    src: galleryAcessoriosCesto.url,
+    alt: "Cesto em rattan com tapetes, blocos e magic circles",
+  },
+  {
+    src: galleryRecepcao.url,
+    alt: "Detalhe da receção do estúdio, armário em madeira e rattan",
   },
 ];
 
