@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X, MessageCircle, Instagram, Phone, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logoUrl from "@/assets/logo-coremore.png";
 import {
   ADDRESS,
   INSTAGRAM_URL,
@@ -23,13 +24,16 @@ const NAV = [
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <a href="#inicio" className={cn("block leading-none", className)}>
-      <span className="block font-serif text-xl tracking-[0.2em] sm:text-2xl">
-        CORE&amp;MORE
-      </span>
-      <span className="mt-1 block text-[0.55rem] tracking-[0.42em] text-muted-foreground sm:text-[0.6rem]">
-        PILATES STUDIO
-      </span>
+    <a
+      href="#inicio"
+      aria-label="Core&More Pilates Studio, voltar ao início"
+      className={cn("block leading-none", className)}
+    >
+      <img
+        src={logoUrl}
+        alt="Core&More Pilates Studio"
+        className="h-11 w-auto sm:h-12"
+      />
     </a>
   );
 }
