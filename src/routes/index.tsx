@@ -19,6 +19,7 @@ import gallerySalaPrincipal from "@/assets/gallery/estudio-sala-principal.jpeg.a
 import galleryChair from "@/assets/gallery/estudio-chair.jpeg.asset.json";
 import galleryWundaChair from "@/assets/gallery/estudio-wunda-chair.jpeg.asset.json";
 import galleryReformersPlanta from "@/assets/gallery/estudio-reformers-planta.jpeg.asset.json";
+import galleryReformersVista from "@/assets/gallery/estudio-reformers-vista.jpeg.asset.json";
 import galleryClassico from "@/assets/gallery/estudio-equipamento-classico.jpeg.asset.json";
 import galleryMatwork from "@/assets/gallery/estudio-matwork-acessorios.jpeg.asset.json";
 import galleryCadillac from "@/assets/gallery/estudio-cadillac.jpeg.asset.json";
@@ -26,6 +27,7 @@ import galleryCadillacExercicio from "@/assets/gallery/estudio-cadillac-exercici
 import galleryReformerFootbar from "@/assets/gallery/estudio-reformer-footbar.jpeg.asset.json";
 import galleryExercicioMolas from "@/assets/gallery/estudio-exercicio-molas.jpeg.asset.json";
 import galleryLadderBarrel from "@/assets/gallery/estudio-ladder-barrel.jpeg.asset.json";
+import galleryLadderBarrelDetalhe from "@/assets/gallery/estudio-ladder-barrel-detalhe.jpeg.asset.json";
 import galleryShoulderRest from "@/assets/gallery/estudio-reformer-shoulder-rest.jpeg.asset.json";
 import galleryDetalhePega from "@/assets/gallery/estudio-detalhe-pega.jpeg.asset.json";
 import galleryDetalheMolas from "@/assets/gallery/estudio-detalhe-molas.jpeg.asset.json";
