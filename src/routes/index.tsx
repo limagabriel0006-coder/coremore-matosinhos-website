@@ -19,6 +19,7 @@ import gallerySalaPrincipal from "@/assets/gallery/estudio-sala-principal.jpeg.a
 import galleryChair from "@/assets/gallery/estudio-chair.jpeg.asset.json";
 import galleryWundaChair from "@/assets/gallery/estudio-wunda-chair.jpeg.asset.json";
 import galleryReformersPlanta from "@/assets/gallery/estudio-reformers-planta.jpeg.asset.json";
+import galleryReformersVista from "@/assets/gallery/estudio-reformers-vista.jpeg.asset.json";
 import galleryClassico from "@/assets/gallery/estudio-equipamento-classico.jpeg.asset.json";
 import galleryMatwork from "@/assets/gallery/estudio-matwork-acessorios.jpeg.asset.json";
 import galleryCadillac from "@/assets/gallery/estudio-cadillac.jpeg.asset.json";
@@ -26,6 +27,7 @@ import galleryCadillacExercicio from "@/assets/gallery/estudio-cadillac-exercici
 import galleryReformerFootbar from "@/assets/gallery/estudio-reformer-footbar.jpeg.asset.json";
 import galleryExercicioMolas from "@/assets/gallery/estudio-exercicio-molas.jpeg.asset.json";
 import galleryLadderBarrel from "@/assets/gallery/estudio-ladder-barrel.jpeg.asset.json";
+import galleryLadderBarrelDetalhe from "@/assets/gallery/estudio-ladder-barrel-detalhe.jpeg.asset.json";
 import galleryShoulderRest from "@/assets/gallery/estudio-reformer-shoulder-rest.jpeg.asset.json";
 import galleryDetalhePega from "@/assets/gallery/estudio-detalhe-pega.jpeg.asset.json";
 import galleryDetalheMolas from "@/assets/gallery/estudio-detalhe-molas.jpeg.asset.json";
@@ -221,6 +223,10 @@ const GALLERY = [
     alt: "Sala principal do estúdio, com espelhos amplos",
   },
   {
+    src: galleryReformersVista.url,
+    alt: "Zona de Reformers, chão em madeira clara e planta",
+  },
+  {
     src: galleryCadillac.url,
     alt: "Cadillac / Trapeze do estúdio",
   },
@@ -247,6 +253,10 @@ const GALLERY = [
   {
     src: galleryLadderBarrel.url,
     alt: "Exercício de extensão no Ladder Barrel",
+  },
+  {
+    src: galleryLadderBarrelDetalhe.url,
+    alt: "Detalhe da barra em madeira do Ladder Barrel",
   },
   {
     src: galleryReformerDetalhe.url,
@@ -343,10 +353,12 @@ function Home() {
 function Hero() {
   return (
     <section id="inicio" className="relative min-h-[92vh] w-full pt-28 pb-16">
-      <ImagePlaceholder
-        label="Imagem de fundo do estúdio"
-        className="absolute inset-0 h-full w-full rounded-none border-0"
+      <img
+        src={galleryReformersVista.url}
+        alt="Sala do Core&More Pilates Studio, com Reformers, chão em madeira clara e planta"
+        className="absolute inset-0 h-full w-full object-cover"
       />
+      <div className="absolute inset-0 bg-background/15" aria-hidden="true" />
       <div className="relative mx-auto flex min-h-[calc(92vh-11rem)] w-full max-w-6xl flex-col justify-center px-5 sm:px-8">
         <Reveal>
           <div className="max-w-2xl bg-background/85 p-8 backdrop-blur-sm sm:p-12">
@@ -423,9 +435,10 @@ function About() {
           </ul>
         </Reveal>
         <Reveal delay={120} className="grid gap-4">
-          <ImagePlaceholder
-            label="Imagem do estúdio"
-            className="aspect-[4/5] w-full"
+          <img
+            src={galleryVistaGeral.url}
+            alt="Vista geral do estúdio Core&More, com Reformers e luz natural"
+            className="aspect-[4/5] w-full rounded-sm object-cover"
           />
           <ImagePlaceholder label="Foto da equipa" className="aspect-[16/10] w-full" />
         </Reveal>
