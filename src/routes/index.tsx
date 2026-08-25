@@ -223,6 +223,10 @@ const GALLERY = [
     alt: "Sala principal do estúdio, com espelhos amplos",
   },
   {
+    src: galleryReformersVista.url,
+    alt: "Zona de Reformers, chão em madeira clara e planta",
+  },
+  {
     src: galleryCadillac.url,
     alt: "Cadillac / Trapeze do estúdio",
   },
@@ -249,6 +253,10 @@ const GALLERY = [
   {
     src: galleryLadderBarrel.url,
     alt: "Exercício de extensão no Ladder Barrel",
+  },
+  {
+    src: galleryLadderBarrelDetalhe.url,
+    alt: "Detalhe da barra em madeira do Ladder Barrel",
   },
   {
     src: galleryReformerDetalhe.url,
