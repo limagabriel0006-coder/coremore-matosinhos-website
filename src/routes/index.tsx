@@ -353,10 +353,12 @@ function Home() {
 function Hero() {
   return (
     <section id="inicio" className="relative min-h-[92vh] w-full pt-28 pb-16">
-      <ImagePlaceholder
-        label="Imagem de fundo do estúdio"
-        className="absolute inset-0 h-full w-full rounded-none border-0"
+      <img
+        src={galleryReformersVista.url}
+        alt="Sala do Core&More Pilates Studio, com Reformers, chão em madeira clara e planta"
+        className="absolute inset-0 h-full w-full object-cover"
       />
+      <div className="absolute inset-0 bg-background/15" aria-hidden="true" />
       <div className="relative mx-auto flex min-h-[calc(92vh-11rem)] w-full max-w-6xl flex-col justify-center px-5 sm:px-8">
         <Reveal>
           <div className="max-w-2xl bg-background/85 p-8 backdrop-blur-sm sm:p-12">
