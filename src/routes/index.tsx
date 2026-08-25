@@ -1,6 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, type FormEvent } from "react";
-import { Star, Clock, Check, Instagram, Phone, MapPin, MessageCircle } from "lucide-react";
+import { useRef, useState, type FormEvent } from "react";
+import {
+  Star,
+  Clock,
+  Check,
+  Instagram,
+  Phone,
+  MapPin,
+  MessageCircle,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+import { cn } from "@/lib/utils";
+import galleryVistaGeral from "@/assets/gallery/estudio-vista-geral.jpeg.asset.json";
+import galleryEspelhos from "@/assets/gallery/estudio-reformers-espelhos.jpeg.asset.json";
+import galleryReformerDetalhe from "@/assets/gallery/estudio-reformer-detalhe.jpeg.asset.json";
+import gallerySalaPrincipal from "@/assets/gallery/estudio-sala-principal.jpeg.asset.json";
+import galleryChair from "@/assets/gallery/estudio-chair.jpeg.asset.json";
+import galleryWundaChair from "@/assets/gallery/estudio-wunda-chair.jpeg.asset.json";
+import galleryReformersPlanta from "@/assets/gallery/estudio-reformers-planta.jpeg.asset.json";
+import galleryClassico from "@/assets/gallery/estudio-equipamento-classico.jpeg.asset.json";
+import galleryMatwork from "@/assets/gallery/estudio-matwork-acessorios.jpeg.asset.json";
 import {
   Accordion,
   AccordionContent,
@@ -182,11 +202,42 @@ const FAQS = [
 ];
 
 const GALLERY = [
-  { label: "Foto do estúdio, vista geral", span: "md:col-span-2 md:row-span-2 aspect-[4/3] md:aspect-auto md:min-h-[420px]" },
-  { label: "Foto do Reformer", span: "aspect-square" },
-  { label: "Foto do Cadillac / Trapeze", span: "aspect-square" },
-  { label: "Foto da zona de matwork", span: "aspect-square" },
-  { label: "Foto de detalhe, acessórios", span: "aspect-square" },
+  {
+    src: galleryVistaGeral.url,
+    alt: "Vista geral do estúdio, com Reformers e luz natural",
+  },
+  {
+    src: gallerySalaPrincipal.url,
+    alt: "Sala principal do estúdio, com espelhos amplos",
+  },
+  {
+    src: galleryEspelhos.url,
+    alt: "Reformers junto à parede de espelhos",
+  },
+  {
+    src: galleryReformersPlanta.url,
+    alt: "Zona de Reformers do estúdio",
+  },
+  {
+    src: galleryReformerDetalhe.url,
+    alt: "Detalhe do estofo em couro do Reformer",
+  },
+  {
+    src: galleryChair.url,
+    alt: "Chair clássica de Pilates em madeira clara",
+  },
+  {
+    src: galleryWundaChair.url,
+    alt: "Wunda Chair com pegas",
+  },
+  {
+    src: galleryClassico.url,
+    alt: "Equipamento clássico de Pilates",
+  },
+  {
+    src: galleryMatwork.url,
+    alt: "Zona de matwork com tapetes, magic circle e acessórios",
+  },
 ];
 
 const TEAM = [
