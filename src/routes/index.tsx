@@ -503,14 +503,88 @@ function Studio() {
           intro="Chão em madeira clara, espelhos amplos, plantas e cestos em rattan com acessórios. Um ambiente boutique com equipamento profissional: Reformer, Cadillac, Barrel, Chair e Ladder Barrel."
         />
       </Reveal>
-      <div className="mt-14 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
-        {GALLERY.map((item, index) => (
-          <Reveal key={item.label} delay={index * 80} className={item.span}>
-            <ImagePlaceholder label={item.label} className="h-full min-h-40 w-full" />
-          </Reveal>
-        ))}
-      </div>
+      <StudioGallery />
     </Section>
+  );
+}
+
+function StudioGallery() {
+  const [index, setIndex] = useState(0);
+  const touchStartX = useRef<number | null>(null);
+  const total = GALLERY.length;
+  const goTo = (next: number) => setIndex(((next % total) + total) % total);
+  const current = GALLERY[index]!;
+
+  return (
+    <div className="mt-14">
+      <Reveal>
+        <div
+          className="relative mx-auto w-full max-w-2xl overflow-hidden rounded-sm border border-border bg-nude/40"
+          onTouchStart={(e) => {
+            touchStartX.current = e.touches[0]?.clientX ?? null;
+          }}
+          onTouchEnd={(e) => {
+            const start = touchStartX.current;
+            touchStartX.current = null;
+            if (start === null) return;
+            const dx = (e.changedTouches[0]?.clientX ?? start) - start;
+            if (Math.abs(dx) > 48) goTo(index + (dx < 0 ? 1 : -1));
+          }}
+        >
+          <img
+            key={current.src}
+            src={current.src}
+            alt={current.alt}
+            className="gallery-fade aspect-[3/4] w-full object-cover sm:aspect-[4/5]"
+          />
+          <button
+            type="button"
+            onClick={() => goTo(index - 1)}
+            aria-label="Fotografia anterior"
+            className="absolute top-1/2 left-3 grid size-11 -translate-y-1/2 place-items-center rounded-full bg-background/85 text-foreground shadow-sm backdrop-blur transition-opacity hover:opacity-90"
+          >
+            <ChevronLeft className="size-5" />
+          </button>
+          <button
+            type="button"
+            onClick={() => goTo(index + 1)}
+            aria-label="Fotografia seguinte"
+            className="absolute top-1/2 right-3 grid size-11 -translate-y-1/2 place-items-center rounded-full bg-background/85 text-foreground shadow-sm backdrop-blur transition-opacity hover:opacity-90"
+          >
+            <ChevronRight className="size-5" />
+          </button>
+          <p className="absolute right-4 bottom-3 rounded-full bg-background/85 px-3 py-1 text-[0.65rem] tracking-[0.2em] text-muted-foreground backdrop-blur">
+            {index + 1} / {total}
+          </p>
+        </div>
+      </Reveal>
+      <Reveal delay={100}>
+        <div className="mt-4 flex justify-start gap-3 overflow-x-auto pb-2 sm:justify-center">
+          {GALLERY.map((item, i) => (
+            <button
+              key={item.src}
+              type="button"
+              onClick={() => goTo(i)}
+              aria-label={`Ver fotografia ${i + 1}: ${item.alt}`}
+              aria-current={i === index}
+              className={cn(
+                "shrink-0 overflow-hidden rounded-sm border transition-opacity",
+                i === index
+                  ? "border-sage-deep opacity-100"
+                  : "border-transparent opacity-60 hover:opacity-100",
+              )}
+            >
+              <img
+                src={item.src}
+                alt=""
+                loading="lazy"
+                className="h-16 w-14 object-cover sm:h-20 sm:w-16"
+              />
+            </button>
+          ))}
+        </div>
+      </Reveal>
+    </div>
   );
 }
 
