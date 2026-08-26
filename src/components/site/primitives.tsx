@@ -1,16 +1,19 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-export const WHATSAPP_URL =
-  "https://wa.me/351914409173?text=" +
-  encodeURIComponent(
-    "Olá, Core&More Pilates! 😊 Vi as informações na vossa página e gostaria de esclarecer uma dúvida. Podem ajudar-me?",
-  );
+export const WHATSAPP_NUMBER = "351914409173";
+export const WHATSAPP_MESSAGE =
+  "Olá, Core&More Pilates! 😊 Vi as informações na vossa página e gostaria de esclarecer uma dúvida. Podem ajudar-me?";
+
+export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+  WHATSAPP_MESSAGE,
+)}`;
 
 export const INSTAGRAM_URL = "https://www.instagram.com/coreandmore_porto/";
 export const PHONE_DISPLAY = "914 409 173";
 export const PHONE_LINK = "tel:+351914409173";
 export const ADDRESS = "R. Dom João I, 292, 4450-189 Matosinhos";
+
 
 export function Reveal({
   children,
