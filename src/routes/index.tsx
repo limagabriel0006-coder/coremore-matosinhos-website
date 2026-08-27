@@ -510,8 +510,12 @@ function Schedule() {
                 <span>Segunda a sexta feira</span>
                 <span className="text-muted-foreground">08:00 às 20:00</span>
               </li>
+              <li className="flex items-baseline justify-between gap-4 border-b border-border pb-4">
+                <span>Sábado</span>
+                <span className="text-muted-foreground">Manhã</span>
+              </li>
               <li className="flex items-baseline justify-between gap-4">
-                <span>Sábado e domingo</span>
+                <span>Feriados</span>
                 <span className="text-muted-foreground">Encerrado</span>
               </li>
             </ul>
@@ -526,13 +530,16 @@ function Schedule() {
             <ul className="mt-6 space-y-4 text-sm">
               <li className="flex items-baseline justify-between gap-4 border-b border-border pb-4">
                 <span>Segunda feira</span>
-                <span className="text-muted-foreground">8h, 9h e 10h</span>
+                <span className="text-muted-foreground">10h</span>
               </li>
               <li className="flex items-baseline justify-between gap-4">
                 <span>Quarta feira</span>
-                <span className="text-muted-foreground">8h, 9h, 10h e 18h</span>
+                <span className="text-muted-foreground">10h</span>
               </li>
             </ul>
+            <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
+              Possibilidade de abertura de mais horários mediante procura.
+            </p>
           </div>
         </Reveal>
       </div>
