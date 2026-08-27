@@ -53,7 +53,7 @@ import {
 
 const TITLE = "Core&More Pilates Studio | Pilates em Matosinhos";
 const DESCRIPTION =
-  "Estúdio boutique de Pilates clássico e Reformer em Matosinhos. Aulas individuais, em dupla e em pequenos grupos, com acompanhamento personalizado.";
+  "Studio de Pilates clássico e Reformer em Matosinhos. Aulas individuais, em dupla e em pequenos grupos, com acompanhamento personalizado.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
