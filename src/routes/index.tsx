@@ -53,7 +53,7 @@ import {
 
 const TITLE = "Core&More Pilates Studio | Pilates em Matosinhos";
 const DESCRIPTION =
-  "Estúdio boutique de Pilates clássico e Reformer em Matosinhos. Aulas individuais, em dupla e em pequenos grupos, com acompanhamento personalizado.";
+  "Studio de Pilates clássico e Reformer em Matosinhos. Aulas individuais, em dupla e em pequenos grupos, com acompanhamento personalizado.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -110,56 +110,33 @@ export const Route = createFileRoute("/")({
 
 const CLASSES = [
   {
-    name: "Pilates Reformer, individual",
+    name: "Aulas com aparelhos",
     level: "Todos os níveis",
     duration: "50 minutos",
-    text: "Sessão totalmente dedicada a si, com avaliação inicial e um plano construído à medida dos seus objetivos, ritmo e histórico clínico.",
+    text: "As aulas de equipamentos são realizadas em aparelhos como o reformer, cadillac ou wunda chair. São aulas dinâmicas, adaptadas a cada indivíduo, cujo objetivo passa por fortalecer o centro e as extremidades, melhorar a flexibilidade e tonificar o corpo de forma generalizada.",
   },
   {
-    name: "Pilates Reformer, em dupla",
+    name: "Aulas de matwork",
     level: "Todos os níveis",
     duration: "50 minutos",
-    text: "A mesma atenção ao detalhe, partilhada com alguém à sua escolha. Ideal para casais, amigas ou familiares que gostam de treinar acompanhados.",
-  },
-  {
-    name: "Pilates Reformer, pequenos grupos",
-    level: "Iniciados e intermédios",
-    duration: "50 minutos",
-    text: "Grupos reduzidos que garantem correção constante e progressão segura, num ambiente próximo e motivador.",
-  },
-  {
-    name: "Pilates Matwork com acessórios",
-    level: "Todos os níveis",
-    duration: "50 minutos",
-    text: "Trabalho de solo com magic circle, bolas, bandas elásticas e outros pequenos acessórios, focado em controlo, mobilidade e força profunda.",
+    text: "Aulas realizadas no colchão, trabalhando com o peso do corpo e alguns utensílios como o magic circle e o small barrel, respeitando sempre os princípios do método Pilates.",
   },
 ];
 
 const PLANS = [
-  {
-    name: "Aula avulso",
-    detail: "Uma aula única, perfeita para experimentar o método e o estúdio.",
-  },
-  {
-    name: "Pack 4 aulas por mês",
-    detail: "Uma aula por semana, para criar rotina e consistência.",
-  },
-  {
-    name: "Pack 8 aulas por mês",
-    detail: "Duas aulas por semana, o ritmo que gera resultados mais rápidos.",
-  },
-  {
-    name: "Aula individual",
-    detail: "Acompanhamento exclusivo, com plano personalizado.",
-  },
-  {
-    name: "Aula em dupla",
-    detail: "Sessão partilhada, com atenção individualizada aos dois alunos.",
-  },
-  {
-    name: "Avaliação inicial",
-    detail: "Primeira sessão de conhecimento, postura e definição de objetivos.",
-  },
+  { name: "PT - 1x/semana", price: "160€" },
+  { name: "PT - 2x/semana", price: "290€" },
+  { name: "PT - 3x/semana", price: "390€" },
+  { name: "PT DUO - 1x/semana", price: "120€" },
+  { name: "PT DUO - 2x/semana", price: "190€" },
+  { name: "Pack Individual 5x", price: "220€" },
+  { name: "Pack Individual 10x", price: "420€" },
+  { name: "Pack Duo 5x", price: "150€" },
+  { name: "Pack Duo 10x", price: "275€" },
+  { name: "Matwork 1x/semana", price: "45€" },
+  { name: "Matwork 2x/semana", price: "70€" },
+  { name: "Aula avulso", price: "45€" },
+  { name: "Aula experimental", price: "20€" },
 ];
 
 const TESTIMONIALS = [
@@ -302,16 +279,16 @@ const GALLERY = [
 const TEAM = [
   {
     name: "Filipa Leal",
-    role: "Fundadora & Professora de Pilates",
-    bio: "Fisioterapeuta de formação e apaixonada pelo método clássico. Acompanha cada aluno com atenção clínica e pedagógica, desenhando aulas seguras, progressivas e adaptadas aos objetivos de cada um.",
+    role: "Proprietária",
+    bio: "Filipa Leal, proprietária do Core&More, licenciada em Fisioterapia desde 2011, trabalhou durante alguns anos na área de Fisioterapia Dermato-funcional e em Músculo-esquelética. Dedica-se no presente às aulas de Pilates, tendo formação em Pilates clássico pela Uno Pilates e Pilates clínico. É formadora de Pilates clínico pela APPI, na Bwizer.",
   },
   {
-    name: "",
+    name: "Marisa Teixeira",
     role: "",
     bio: "",
   },
   {
-    name: "",
+    name: "Iva Sousa",
     role: "",
     bio: "",
   },
@@ -363,12 +340,15 @@ function Hero() {
       <div className="relative mx-auto flex min-h-[calc(92vh-11rem)] w-full max-w-6xl flex-col justify-center px-5 sm:px-8">
         <Reveal>
           <div className="max-w-2xl bg-background/85 p-8 backdrop-blur-sm sm:p-12">
-            <p className="eyebrow">Pilates boutique em Matosinhos</p>
+            <p className="eyebrow">Pilates studio em Matosinhos</p>
             <h1 className="mt-6 text-4xl leading-[1.1] sm:text-5xl md:text-6xl">
               Fortalece o teu core.
               <br />
               Reencontra o teu equilíbrio.
             </h1>
+            <p className="mt-4 text-lg font-light italic text-foreground/80">
+              Fortalecer a partir do core.
+            </p>
             <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground">
               Um estúdio intimista de Pilates clássico e matwork em Matosinhos, com
               turmas reduzidas, equipamento profissional e acompanhamento próximo em
@@ -412,7 +392,7 @@ function About() {
               respeita o corpo de cada aluno e a sua história.
             </p>
             <p>
-              Abrimos portas a 3 de novembro de 2025, com um estúdio novo, luminoso e
+              Abrimos portas a 3 de novembro de 2025, com um estúdio novo, acolhedor e
               cuidado ao detalhe, pensado para receber poucas pessoas de cada vez. Aqui
               não há multidões nem ruído, há tempo para corrigir, explicar e progredir.
             </p>
@@ -480,10 +460,20 @@ function Classes() {
         ))}
       </div>
       <Reveal delay={120}>
-        <p className="mx-auto mt-10 max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
-          As aulas individuais e em dupla são marcadas mediante disponibilidade do
-          aluno e do professor.
-        </p>
+        <div className="mx-auto mt-12 max-w-3xl space-y-4 border border-border bg-card p-8 text-sm leading-relaxed text-muted-foreground">
+          <p>
+            <strong className="text-foreground">Aulas em aparelhos:</strong> individuais, em dupla ou em pequenos grupos (máx. 3 pessoas). Duração: 50 minutos.
+          </p>
+          <p>
+            <strong className="text-foreground">Aulas de matwork:</strong> pequenos grupos de máximo 3 pessoas, com utensílios como softball e magic circle.
+          </p>
+          <p>
+            As aulas de aparelhos são agendadas conforme a disponibilidade do aluno e do professor.
+          </p>
+          <p>
+            As aulas de matwork acontecem às segundas e quartas-feiras às 10h (com possibilidade de abertura de mais horários).
+          </p>
+        </div>
         <div className="mt-8 text-center">
           <a
             href={WHATSAPP_URL}
@@ -520,8 +510,12 @@ function Schedule() {
                 <span>Segunda a sexta feira</span>
                 <span className="text-muted-foreground">08:00 às 20:00</span>
               </li>
+              <li className="flex items-baseline justify-between gap-4 border-b border-border pb-4">
+                <span>Sábado</span>
+                <span className="text-muted-foreground">Manhã</span>
+              </li>
               <li className="flex items-baseline justify-between gap-4">
-                <span>Sábado e domingo</span>
+                <span>Feriados</span>
                 <span className="text-muted-foreground">Encerrado</span>
               </li>
             </ul>
@@ -536,13 +530,16 @@ function Schedule() {
             <ul className="mt-6 space-y-4 text-sm">
               <li className="flex items-baseline justify-between gap-4 border-b border-border pb-4">
                 <span>Segunda feira</span>
-                <span className="text-muted-foreground">8h, 9h e 10h</span>
+                <span className="text-muted-foreground">10h</span>
               </li>
               <li className="flex items-baseline justify-between gap-4">
                 <span>Quarta feira</span>
-                <span className="text-muted-foreground">8h, 9h, 10h e 18h</span>
+                <span className="text-muted-foreground">10h</span>
               </li>
             </ul>
+            <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
+              Possibilidade de abertura de mais horários mediante procura.
+            </p>
           </div>
         </Reveal>
       </div>
@@ -562,8 +559,8 @@ function Studio() {
       <Reveal>
         <SectionHeading
           eyebrow="O estúdio"
-          title="Um espaço luminoso, pensado ao detalhe"
-          intro="Chão em madeira clara, espelhos amplos, plantas e cestos em rattan com acessórios. Um ambiente boutique com equipamento profissional: Reformer, Cadillac, Barrel, Chair e Ladder Barrel."
+          title="Um espaço acolhedor, pensado ao detalhe"
+          intro="Chão em madeira clara, espelhos amplos, plantas e cestos em rattan com acessórios. Um ambiente studio com equipamento profissional: Reformer, Cadillac, Barrel, Chair e Ladder Barrel."
         />
       </Reveal>
       <StudioGallery />
@@ -661,26 +658,57 @@ function Pricing() {
           intro="Escolhemos o plano contigo, de acordo com a frequência e o formato de aula que fazem sentido para a tua rotina."
         />
       </Reveal>
-      <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {PLANS.map((plan, index) => (
-          <Reveal key={plan.name} delay={index * 70}>
-            <article className="flex h-full flex-col border border-border bg-card p-8">
-              <h3 className="text-xl">{plan.name}</h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                {plan.detail}
-              </p>
-              <p className="mt-6 border-t border-border pt-5 text-xs tracking-[0.16em] uppercase text-sage-deep">
-                Preço sob consulta
-              </p>
-            </article>
-          </Reveal>
-        ))}
+      <div className="mt-14 overflow-hidden border border-border bg-card">
+        <table className="w-full text-sm">
+          <thead className="border-b border-border bg-nude/60 text-left text-xs tracking-[0.14em] uppercase text-muted-foreground">
+            <tr>
+              <th className="px-6 py-4 font-normal">Serviço</th>
+              <th className="px-6 py-4 text-right font-normal">Preço</th>
+            </tr>
+          </thead>
+          <tbody>
+            {PLANS.map((plan, index) => (
+              <tr
+                key={plan.name}
+                className={cn(
+                  "border-b border-border last:border-b-0",
+                  index % 2 === 1 && "bg-background/50",
+                )}
+              >
+                <td className="px-6 py-4">{plan.name}</td>
+                <td className="px-6 py-4 text-right font-medium">{plan.price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
+      <p className="mt-4 text-center text-xs text-muted-foreground">
+        Todos os preços são por pessoa.
+      </p>
       <Reveal delay={120}>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="border border-border bg-card p-8">
+            <h3 className="text-xl">Mensalidade</h3>
+            <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground">
+              <li>Dia e horário fixos.</li>
+              <li>Desmarcação com 24h de antecedência.</li>
+              <li>Possibilidade de alterar horário mediante disponibilidade do professor.</li>
+            </ul>
+          </div>
+          <div className="border border-border bg-card p-8">
+            <h3 className="text-xl">Pack de aulas (5 ou 10 aulas)</h3>
+            <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground">
+              <li>Sem compromisso de dia/horário fixo.</li>
+              <li>Agendamento semanal.</li>
+              <li>Cancelamento até 24h antes da aula.</li>
+            </ul>
+          </div>
+        </div>
+      </Reveal>
+      <Reveal delay={160}>
         <div className="mt-10 border border-border bg-nude/60 p-8 text-center">
           <p className="text-sm leading-relaxed text-muted-foreground">
-            Os valores são apresentados sob consulta. Fala connosco e indicamos o plano
-            mais adequado ao teu objetivo e disponibilidade.
+            Fala connosco e indicamos o plano mais adequado ao teu objetivo e disponibilidade.
           </p>
           <a
             href={WHATSAPP_URL}
@@ -774,12 +802,20 @@ function Team() {
           <Reveal key={member.name} delay={index * 90}>
             <article className="flex h-full flex-col border border-border bg-card p-8">
               <h3 className="text-xl">{member.name}</h3>
-              <p className="mt-1 text-xs tracking-[0.14em] uppercase text-sage-deep">
-                {member.role}
-              </p>
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
-                {member.bio}
-              </p>
+              {member.role ? (
+                <p className="mt-1 text-xs tracking-[0.14em] uppercase text-sage-deep">
+                  {member.role}
+                </p>
+              ) : null}
+              {member.bio ? (
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
+                  {member.bio}
+                </p>
+              ) : (
+                <div className="mt-4 flex flex-1 items-center justify-center rounded-sm border border-dashed border-border bg-background/50 p-8 text-center text-sm text-muted-foreground">
+                  Bio e fotografia a adicionar.
+                </div>
+              )}
             </article>
           </Reveal>
         ))}

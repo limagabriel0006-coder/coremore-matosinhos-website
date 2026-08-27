@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Estúdio boutique de Pilates clássico e Reformer em Matosinhos, com aulas individuais, em dupla e em pequenos grupos.",
+          "Studio de Pilates clássico e Reformer em Matosinhos, com aulas individuais, em dupla e em pequenos grupos.",
       },
       { name: "author", content: "Core&More Pilates Studio" },
       { property: "og:site_name", content: "Core&More Pilates Studio" },
