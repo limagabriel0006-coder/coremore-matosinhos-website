@@ -559,8 +559,8 @@ function Studio() {
       <Reveal>
         <SectionHeading
           eyebrow="O estúdio"
-          title="Um espaço luminoso, pensado ao detalhe"
-          intro="Chão em madeira clara, espelhos amplos, plantas e cestos em rattan com acessórios. Um ambiente boutique com equipamento profissional: Reformer, Cadillac, Barrel, Chair e Ladder Barrel."
+          title="Um espaço acolhedor, pensado ao detalhe"
+          intro="Chão em madeira clara, espelhos amplos, plantas e cestos em rattan com acessórios. Um ambiente studio com equipamento profissional: Reformer, Cadillac, Barrel, Chair e Ladder Barrel."
         />
       </Reveal>
       <StudioGallery />
