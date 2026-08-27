@@ -340,12 +340,15 @@ function Hero() {
       <div className="relative mx-auto flex min-h-[calc(92vh-11rem)] w-full max-w-6xl flex-col justify-center px-5 sm:px-8">
         <Reveal>
           <div className="max-w-2xl bg-background/85 p-8 backdrop-blur-sm sm:p-12">
-            <p className="eyebrow">Pilates boutique em Matosinhos</p>
+            <p className="eyebrow">Pilates studio em Matosinhos</p>
             <h1 className="mt-6 text-4xl leading-[1.1] sm:text-5xl md:text-6xl">
               Fortalece o teu core.
               <br />
               Reencontra o teu equilíbrio.
             </h1>
+            <p className="mt-4 text-lg font-light italic text-foreground/80">
+              Fortalecer a partir do core.
+            </p>
             <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground">
               Um estúdio intimista de Pilates clássico e matwork em Matosinhos, com
               turmas reduzidas, equipamento profissional e acompanhamento próximo em
