@@ -658,26 +658,57 @@ function Pricing() {
           intro="Escolhemos o plano contigo, de acordo com a frequência e o formato de aula que fazem sentido para a tua rotina."
         />
       </Reveal>
-      <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {PLANS.map((plan, index) => (
-          <Reveal key={plan.name} delay={index * 70}>
-            <article className="flex h-full flex-col border border-border bg-card p-8">
-              <h3 className="text-xl">{plan.name}</h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                {plan.detail}
-              </p>
-              <p className="mt-6 border-t border-border pt-5 text-xs tracking-[0.16em] uppercase text-sage-deep">
-                Preço sob consulta
-              </p>
-            </article>
-          </Reveal>
-        ))}
+      <div className="mt-14 overflow-hidden border border-border bg-card">
+        <table className="w-full text-sm">
+          <thead className="border-b border-border bg-nude/60 text-left text-xs tracking-[0.14em] uppercase text-muted-foreground">
+            <tr>
+              <th className="px-6 py-4 font-normal">Serviço</th>
+              <th className="px-6 py-4 text-right font-normal">Preço</th>
+            </tr>
+          </thead>
+          <tbody>
+            {PLANS.map((plan, index) => (
+              <tr
+                key={plan.name}
+                className={cn(
+                  "border-b border-border last:border-b-0",
+                  index % 2 === 1 && "bg-background/50",
+                )}
+              >
+                <td className="px-6 py-4">{plan.name}</td>
+                <td className="px-6 py-4 text-right font-medium">{plan.price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
+      <p className="mt-4 text-center text-xs text-muted-foreground">
+        Todos os preços são por pessoa.
+      </p>
       <Reveal delay={120}>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="border border-border bg-card p-8">
+            <h3 className="text-xl">Mensalidade</h3>
+            <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground">
+              <li>Dia e horário fixos.</li>
+              <li>Desmarcação com 24h de antecedência.</li>
+              <li>Possibilidade de alterar horário mediante disponibilidade do professor.</li>
+            </ul>
+          </div>
+          <div className="border border-border bg-card p-8">
+            <h3 className="text-xl">Pack de aulas (5 ou 10 aulas)</h3>
+            <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground">
+              <li>Sem compromisso de dia/horário fixo.</li>
+              <li>Agendamento semanal.</li>
+              <li>Cancelamento até 24h antes da aula.</li>
+            </ul>
+          </div>
+        </div>
+      </Reveal>
+      <Reveal delay={160}>
         <div className="mt-10 border border-border bg-nude/60 p-8 text-center">
           <p className="text-sm leading-relaxed text-muted-foreground">
-            Os valores são apresentados sob consulta. Fala connosco e indicamos o plano
-            mais adequado ao teu objetivo e disponibilidade.
+            Fala connosco e indicamos o plano mais adequado ao teu objetivo e disponibilidade.
           </p>
           <a
             href={WHATSAPP_URL}
