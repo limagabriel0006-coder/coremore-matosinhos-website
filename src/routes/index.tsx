@@ -124,30 +124,19 @@ const CLASSES = [
 ];
 
 const PLANS = [
-  {
-    name: "Aula avulso",
-    detail: "Uma aula única, perfeita para experimentar o método e o estúdio.",
-  },
-  {
-    name: "Pack 4 aulas por mês",
-    detail: "Uma aula por semana, para criar rotina e consistência.",
-  },
-  {
-    name: "Pack 8 aulas por mês",
-    detail: "Duas aulas por semana, o ritmo que gera resultados mais rápidos.",
-  },
-  {
-    name: "Aula individual",
-    detail: "Acompanhamento exclusivo, com plano personalizado.",
-  },
-  {
-    name: "Aula em dupla",
-    detail: "Sessão partilhada, com atenção individualizada aos dois alunos.",
-  },
-  {
-    name: "Avaliação inicial",
-    detail: "Primeira sessão de conhecimento, postura e definição de objetivos.",
-  },
+  { name: "PT - 1x/semana", price: "160€" },
+  { name: "PT - 2x/semana", price: "290€" },
+  { name: "PT - 3x/semana", price: "390€" },
+  { name: "PT DUO - 1x/semana", price: "120€" },
+  { name: "PT DUO - 2x/semana", price: "190€" },
+  { name: "Pack Individual 5x", price: "220€" },
+  { name: "Pack Individual 10x", price: "420€" },
+  { name: "Pack Duo 5x", price: "150€" },
+  { name: "Pack Duo 10x", price: "275€" },
+  { name: "Matwork 1x/semana", price: "45€" },
+  { name: "Matwork 2x/semana", price: "70€" },
+  { name: "Aula avulso", price: "45€" },
+  { name: "Aula experimental", price: "20€" },
 ];
 
 const TESTIMONIALS = [
