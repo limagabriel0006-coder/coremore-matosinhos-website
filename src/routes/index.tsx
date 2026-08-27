@@ -110,28 +110,16 @@ export const Route = createFileRoute("/")({
 
 const CLASSES = [
   {
-    name: "Pilates Reformer, individual",
+    name: "Aulas com aparelhos",
     level: "Todos os níveis",
     duration: "50 minutos",
-    text: "Sessão totalmente dedicada a si, com avaliação inicial e um plano construído à medida dos seus objetivos, ritmo e histórico clínico.",
+    text: "As aulas de equipamentos são realizadas em aparelhos como o reformer, cadillac ou wunda chair. São aulas dinâmicas, adaptadas a cada indivíduo, cujo objetivo passa por fortalecer o centro e as extremidades, melhorar a flexibilidade e tonificar o corpo de forma generalizada.",
   },
   {
-    name: "Pilates Reformer, em dupla",
+    name: "Aulas de matwork",
     level: "Todos os níveis",
     duration: "50 minutos",
-    text: "A mesma atenção ao detalhe, partilhada com alguém à sua escolha. Ideal para casais, amigas ou familiares que gostam de treinar acompanhados.",
-  },
-  {
-    name: "Pilates Reformer, pequenos grupos",
-    level: "Iniciados e intermédios",
-    duration: "50 minutos",
-    text: "Grupos reduzidos que garantem correção constante e progressão segura, num ambiente próximo e motivador.",
-  },
-  {
-    name: "Pilates Matwork com acessórios",
-    level: "Todos os níveis",
-    duration: "50 minutos",
-    text: "Trabalho de solo com magic circle, bolas, bandas elásticas e outros pequenos acessórios, focado em controlo, mobilidade e força profunda.",
+    text: "Aulas realizadas no colchão, trabalhando com o peso do corpo e alguns utensílios como o magic circle e o small barrel, respeitando sempre os princípios do método Pilates.",
   },
 ];
 
