@@ -124,19 +124,6 @@
   color: var(--sage-deep);
 }
 
-@utility placeholder-frame {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: var(--greige);
-  color: var(--muted-foreground);
-  border: 1px dashed color-mix(in oklab, var(--clay) 30%, transparent);
-  font-size: 0.72rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-}
-
 @keyframes core-fade-up {
   from {
     opacity: 0;
