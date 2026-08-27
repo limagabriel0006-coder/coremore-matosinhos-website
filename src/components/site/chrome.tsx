@@ -139,8 +139,8 @@ export function Footer() {
         <div>
           <Logo />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-muted-foreground">
-            Estúdio boutique de Pilates clássico e matwork em Matosinhos. Aulas
-            individuais, em dupla e em pequenos grupos.
+            Studio de Pilates clássico e matwork em Matosinhos. Aulas individuais, em
+            dupla e em pequenos grupos.
           </p>
         </div>
 
