@@ -802,12 +802,20 @@ function Team() {
           <Reveal key={member.name} delay={index * 90}>
             <article className="flex h-full flex-col border border-border bg-card p-8">
               <h3 className="text-xl">{member.name}</h3>
-              <p className="mt-1 text-xs tracking-[0.14em] uppercase text-sage-deep">
-                {member.role}
-              </p>
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
-                {member.bio}
-              </p>
+              {member.role ? (
+                <p className="mt-1 text-xs tracking-[0.14em] uppercase text-sage-deep">
+                  {member.role}
+                </p>
+              ) : null}
+              {member.bio ? (
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
+                  {member.bio}
+                </p>
+              ) : (
+                <div className="mt-4 flex flex-1 items-center justify-center rounded-sm border border-dashed border-border bg-background/50 p-8 text-center text-sm text-muted-foreground">
+                  Bio e fotografia a adicionar.
+                </div>
+              )}
             </article>
           </Reveal>
         ))}
