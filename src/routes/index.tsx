@@ -460,10 +460,20 @@ function Classes() {
         ))}
       </div>
       <Reveal delay={120}>
-        <p className="mx-auto mt-10 max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
-          As aulas individuais e em dupla são marcadas mediante disponibilidade do
-          aluno e do professor.
-        </p>
+        <div className="mx-auto mt-12 max-w-3xl space-y-4 border border-border bg-card p-8 text-sm leading-relaxed text-muted-foreground">
+          <p>
+            <strong className="text-foreground">Aulas em aparelhos:</strong> individuais, em dupla ou em pequenos grupos (máx. 3 pessoas). Duração: 50 minutos.
+          </p>
+          <p>
+            <strong className="text-foreground">Aulas de matwork:</strong> pequenos grupos de máximo 3 pessoas, com utensílios como softball e magic circle.
+          </p>
+          <p>
+            As aulas de aparelhos são agendadas conforme a disponibilidade do aluno e do professor.
+          </p>
+          <p>
+            As aulas de matwork acontecem às segundas e quartas-feiras às 10h (com possibilidade de abertura de mais horários).
+          </p>
+        </div>
         <div className="mt-8 text-center">
           <a
             href={WHATSAPP_URL}
