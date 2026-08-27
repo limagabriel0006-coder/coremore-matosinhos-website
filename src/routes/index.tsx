@@ -392,7 +392,7 @@ function About() {
               respeita o corpo de cada aluno e a sua história.
             </p>
             <p>
-              Abrimos portas a 3 de novembro de 2025, com um estúdio novo, luminoso e
+              Abrimos portas a 3 de novembro de 2025, com um estúdio novo, acolhedor e
               cuidado ao detalhe, pensado para receber poucas pessoas de cada vez. Aqui
               não há multidões nem ruído, há tempo para corrigir, explicar e progredir.
             </p>
