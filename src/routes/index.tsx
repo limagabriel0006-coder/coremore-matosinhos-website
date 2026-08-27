@@ -279,16 +279,16 @@ const GALLERY = [
 const TEAM = [
   {
     name: "Filipa Leal",
-    role: "Fundadora & Professora de Pilates",
-    bio: "Fisioterapeuta de formação e apaixonada pelo método clássico. Acompanha cada aluno com atenção clínica e pedagógica, desenhando aulas seguras, progressivas e adaptadas aos objetivos de cada um.",
+    role: "Proprietária",
+    bio: "Filipa Leal, proprietária do Core&More, licenciada em Fisioterapia desde 2011, trabalhou durante alguns anos na área de Fisioterapia Dermato-funcional e em Músculo-esquelética. Dedica-se no presente às aulas de Pilates, tendo formação em Pilates clássico pela Uno Pilates e Pilates clínico. É formadora de Pilates clínico pela APPI, na Bwizer.",
   },
   {
-    name: "",
+    name: "Marisa Teixeira",
     role: "",
     bio: "",
   },
   {
-    name: "",
+    name: "Iva Sousa",
     role: "",
     bio: "",
   },
