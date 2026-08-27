@@ -99,16 +99,3 @@ export function SectionHeading({
   );
 }
 
-export function ImagePlaceholder({
-  label,
-  className,
-}: {
-  label: string;
-  className?: string;
-}) {
-  return (
-    <div className={cn("placeholder-frame rounded-sm p-6", className)}>
-      <span>{label}</span>
-    </div>
-  );
-}
