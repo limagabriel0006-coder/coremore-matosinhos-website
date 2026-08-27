@@ -306,14 +306,14 @@ const TEAM = [
     bio: "Fisioterapeuta de formação e apaixonada pelo método clássico. Acompanha cada aluno com atenção clínica e pedagógica, desenhando aulas seguras, progressivas e adaptadas aos objetivos de cada um.",
   },
   {
-    name: "Rita Martins",
-    role: "Professora de Pilates Clássico",
-    bio: "Especialista em Reformer e matwork, com uma abordagem atenta à alinhamento e respiração. Acredita que uma aula bem conduzida transforma o corpo e a mente.",
+    name: "",
+    role: "",
+    bio: "",
   },
   {
-    name: "Miguel Santos",
-    role: "Fisioterapeuta & Instrutor de Pilates",
-    bio: "Combina o conhecimento clínico com o método Pilates para quem procura recuperação, prevenção e melhoria da performance física. Foco em segurança e progressão.",
+    name: "",
+    role: "",
+    bio: "",
   },
 ];
 
