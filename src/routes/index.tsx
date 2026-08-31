@@ -292,6 +292,7 @@ const TEAM = [
     name: "Iva Sousa",
     role: "Instrutora de Pilates e Personal Trainer",
     bio: "Técnica de Exercício Físico desde 2023 e Personal Trainer. É uma apaixonada por Crossfit, tem o level 1 e dá aulas desta modalidade desde 2021. Começou por fazer formação de Pilates matwork na Promofit e está neste momento a terminar a de Pilates Clássico no estúdio To be Pilates.",
+    photo: ivaPhoto.url,
   },
 ];
 
