@@ -34,6 +34,7 @@ import galleryDetalheMolas from "@/assets/gallery/estudio-detalhe-molas.jpeg.ass
 import galleryAcessoriosCesto from "@/assets/gallery/estudio-acessorios-cesto.jpeg.asset.json";
 import galleryRecepcao from "@/assets/gallery/estudio-recepcao-armario.jpeg.asset.json";
 import ivaPhoto from "@/assets/team/iva-sousa.png.asset.json";
+import marisaPhoto from "@/assets/team/marisa-teixeira.jpeg.asset.json";
 import {
   Accordion,
   AccordionContent,
