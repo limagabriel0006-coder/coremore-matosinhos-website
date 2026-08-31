@@ -802,22 +802,35 @@ function Team() {
       <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {TEAM.map((member, index) => (
           <Reveal key={member.name} delay={index * 90}>
-            <article className="flex h-full flex-col border border-border bg-card p-8">
-              <h3 className="text-xl">{member.name}</h3>
-              {member.role ? (
-                <p className="mt-1 text-xs tracking-[0.14em] uppercase text-sage-deep">
-                  {member.role}
-                </p>
-              ) : null}
-              {member.bio ? (
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
-                  {member.bio}
-                </p>
+            <article className="flex h-full flex-col border border-border bg-card">
+              {member.photo ? (
+                <img
+                  src={member.photo}
+                  alt={`Fotografia de ${member.name}`}
+                  className="aspect-[4/5] w-full object-cover"
+                />
               ) : (
-                <div className="mt-4 flex flex-1 items-center justify-center rounded-sm border border-dashed border-border bg-background/50 p-8 text-center text-sm text-muted-foreground">
-                  Bio e fotografia a adicionar.
+                <div className="flex aspect-[4/5] w-full items-center justify-center bg-background/50 text-sm text-muted-foreground">
+                  Fotografia a adicionar.
                 </div>
               )}
+              <div className="flex flex-1 flex-col p-8">
+                <h3 className="text-xl">{member.name}</h3>
+                {member.role ? (
+                  <p className="mt-1 text-xs tracking-[0.14em] uppercase text-sage-deep">
+                    {member.role}
+                  </p>
+                ) : null}
+                {member.bio ? (
+                  <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
+                    {member.bio}
+                  </p>
+                ) : (
+                  <div className="mt-4 flex flex-1 items-center justify-center rounded-sm border border-dashed border-border bg-background/50 p-8 text-center text-sm text-muted-foreground">
+                    Bio a adicionar.
+                  </div>
+                )}
+              </div>
             </article>
           </Reveal>
         ))}
