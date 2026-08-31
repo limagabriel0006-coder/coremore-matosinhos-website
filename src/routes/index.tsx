@@ -33,6 +33,7 @@ import galleryDetalhePega from "@/assets/gallery/estudio-detalhe-pega.jpeg.asset
 import galleryDetalheMolas from "@/assets/gallery/estudio-detalhe-molas.jpeg.asset.json";
 import galleryAcessoriosCesto from "@/assets/gallery/estudio-acessorios-cesto.jpeg.asset.json";
 import galleryRecepcao from "@/assets/gallery/estudio-recepcao-armario.jpeg.asset.json";
+import ivaPhoto from "@/assets/team/iva-sousa.png.asset.json";
 import {
   Accordion,
   AccordionContent,
