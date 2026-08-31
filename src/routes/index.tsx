@@ -284,13 +284,13 @@ const TEAM = [
   },
   {
     name: "Marisa Teixeira",
-    role: "",
-    bio: "",
+    role: "Fisioterapeuta e instrutora de Pilates",
+    bio: "Licenciada em Fisioterapia desde 2017, dedica-se fundamentalmente às áreas Músculo-esquelética e Dermato-funcional, trabalhando num gabinete de Fisioterapia. Dá aulas de Pilates a pequenos grupos e individuais. Tem formação em Pilates clínico Matwork desde 2019 e está a frequentar a formação de Pilates Clássico no estúdio To be Pilates.",
   },
   {
     name: "Iva Sousa",
-    role: "",
-    bio: "",
+    role: "Instrutora de Pilates e Personal Trainer",
+    bio: "Técnica de Exercício Físico desde 2023 e Personal Trainer. É uma apaixonada por Crossfit, tem o level 1 e dá aulas desta modalidade desde 2021. Começou por fazer formação de Pilates matwork na Promofit e está neste momento a terminar a de Pilates Clássico no estúdio To be Pilates.",
   },
 ];
 
