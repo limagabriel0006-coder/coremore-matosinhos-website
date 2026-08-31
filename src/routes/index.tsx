@@ -34,6 +34,7 @@ import galleryDetalheMolas from "@/assets/gallery/estudio-detalhe-molas.jpeg.ass
 import galleryAcessoriosCesto from "@/assets/gallery/estudio-acessorios-cesto.jpeg.asset.json";
 import galleryRecepcao from "@/assets/gallery/estudio-recepcao-armario.jpeg.asset.json";
 import ivaPhoto from "@/assets/team/iva-sousa.png.asset.json";
+import marisaPhoto from "@/assets/team/marisa-teixeira.jpeg.asset.json";
 import {
   Accordion,
   AccordionContent,
@@ -287,6 +288,7 @@ const TEAM = [
     name: "Marisa Teixeira",
     role: "Fisioterapeuta e instrutora de Pilates",
     bio: "Licenciada em Fisioterapia desde 2017, dedica-se fundamentalmente às áreas Músculo-esquelética e Dermato-funcional, trabalhando num gabinete de Fisioterapia. Dá aulas de Pilates a pequenos grupos e individuais. Tem formação em Pilates clínico Matwork desde 2019 e está a frequentar a formação de Pilates Clássico no estúdio To be Pilates.",
+    photo: marisaPhoto.url,
   },
   {
     name: "Iva Sousa",
