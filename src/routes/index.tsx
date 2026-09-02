@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useRef, useState, type FormEvent } from "react";
+import { useRef, useState } from "react";
 import {
   Star,
   Clock,
@@ -10,10 +10,8 @@ import {
   MessageCircle,
   ChevronLeft,
   ChevronRight,
-  Loader2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { submitContactForm } from "@/lib/contact.functions";
 import galleryVistaGeral from "@/assets/gallery/estudio-vista-geral.jpeg.asset.json";
 import galleryEspelhos from "@/assets/gallery/estudio-reformers-espelhos.jpeg.asset.json";
 import galleryReformerDetalhe from "@/assets/gallery/estudio-reformer-detalhe.jpeg.asset.json";
@@ -881,32 +879,6 @@ function Team() {
 }
 
 function Contacts() {
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
-    "idle",
-  );
-
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const data = new FormData(form);
-    setStatus("sending");
-    try {
-      await submitContactForm({
-        data: {
-          nome: String(data.get("nome") ?? ""),
-          email: String(data.get("email") ?? ""),
-          telefone: String(data.get("telefone") ?? ""),
-          mensagem: String(data.get("mensagem") ?? ""),
-          empresa: String(data.get("empresa") ?? ""),
-        },
-      });
-      setStatus("sent");
-      form.reset();
-    } catch {
-      setStatus("error");
-    }
-  }
-
   return (
     <Section id="contactos">
       <Reveal>
@@ -990,113 +962,30 @@ function Contacts() {
         </Reveal>
 
         <Reveal delay={120}>
-          <form
-            onSubmit={handleSubmit}
-            className="border border-border bg-card p-8"
-            aria-label="Formulário de contacto e marcação"
-          >
-            <h3 className="text-2xl">Pedido de marcação</h3>
-            <p className="mt-3 text-sm text-muted-foreground">
-              Preenche os teus dados e entramos em contacto para confirmar horário.
+          <div className="flex h-full flex-col justify-center border border-border bg-card p-8">
+            <h3 className="text-2xl">Fala connosco pelo WhatsApp</h3>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              A forma mais rápida de marcar a tua aula ou esclarecer dúvidas. Responderemos com as próximas vagas disponíveis.
             </p>
 
-            <div className="mt-7 space-y-5">
-              <Field id="nome" label="Nome" type="text" autoComplete="name" required />
-              <Field id="email" label="Email" type="email" autoComplete="email" required />
-              <Field id="telefone" label="Telefone" type="tel" autoComplete="tel" />
-              <div>
-                <label
-                  htmlFor="mensagem"
-                  className="block text-xs tracking-[0.16em] uppercase text-muted-foreground"
-                >
-                  Mensagem
-                </label>
-                <textarea
-                  id="mensagem"
-                  name="mensagem"
-                  rows={4}
-                  required
-                  className="mt-2 w-full border border-input bg-background px-4 py-3 text-sm outline-none focus:border-ring"
-                />
-              </div>
-            </div>
-
-            <div className="hidden" aria-hidden="true">
-              <label htmlFor="empresa">Empresa</label>
-              <input
-                id="empresa"
-                name="empresa"
-                type="text"
-                tabIndex={-1}
-                autoComplete="off"
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={status === "sending"}
-              className="mt-8 flex w-full items-center justify-center gap-2 rounded-sm bg-primary px-8 py-4 text-xs tracking-[0.18em] uppercase text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 flex items-center justify-center gap-3 rounded-sm bg-sage-deep px-8 py-4 text-xs tracking-[0.18em] uppercase text-primary-foreground transition-opacity hover:opacity-90"
             >
-              {status === "sending" ? (
-                <>
-                  <Loader2 className="size-4 animate-spin" />
-                  A enviar...
-                </>
-              ) : (
-                "Enviar pedido"
-              )}
-            </button>
+              <MessageCircle className="size-5" />
+              Enviar mensagem no WhatsApp
+            </a>
 
-            {status === "sent" ? (
-              <p className="mt-5 border border-border bg-accent/60 p-4 text-sm text-accent-foreground">
-                Obrigado pelo teu contacto. Enviámos-te um email de confirmação
-                e respondemos em breve. Para uma resposta mais rápida, fala
-                connosco também pelo WhatsApp.
-              </p>
-            ) : null}
-
-            {status === "error" ? (
-              <p className="mt-5 border border-border bg-accent/60 p-4 text-sm text-accent-foreground">
-                Não foi possível enviar o teu pedido. Tenta novamente ou fala
-                connosco pelo WhatsApp.
-              </p>
-            ) : null}
-          </form>
+            <p className="mt-6 text-xs leading-relaxed text-muted-foreground">
+              Também podes ligar para {PHONE_DISPLAY} ou enviar mensagem direta no Instagram.
+              Estamos na {ADDRESS}.
+            </p>
+          </div>
         </Reveal>
       </div>
     </Section>
   );
 }
 
-function Field({
-  id,
-  label,
-  type,
-  autoComplete,
-  required,
-}: {
-  id: string;
-  label: string;
-  type: string;
-  autoComplete?: string;
-  required?: boolean;
-}) {
-  return (
-    <div>
-      <label
-        htmlFor={id}
-        className="block text-xs tracking-[0.16em] uppercase text-muted-foreground"
-      >
-        {label}
-      </label>
-      <input
-        id={id}
-        name={id}
-        type={type}
-        autoComplete={autoComplete}
-        required={required}
-        className="mt-2 w-full border border-input bg-background px-4 py-3 text-sm outline-none focus:border-ring"
-      />
-    </div>
-  );
-}
