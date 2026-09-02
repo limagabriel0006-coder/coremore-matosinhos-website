@@ -10,8 +10,10 @@ import {
   MessageCircle,
   ChevronLeft,
   ChevronRight,
+  Loader2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { submitContactForm } from "@/lib/contact.functions";
 import galleryVistaGeral from "@/assets/gallery/estudio-vista-geral.jpeg.asset.json";
 import galleryEspelhos from "@/assets/gallery/estudio-reformers-espelhos.jpeg.asset.json";
 import galleryReformerDetalhe from "@/assets/gallery/estudio-reformer-detalhe.jpeg.asset.json";
@@ -879,11 +881,30 @@ function Team() {
 }
 
 function Contacts() {
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
+    "idle",
+  );
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSent(true);
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    setStatus("sending");
+    try {
+      await submitContactForm({
+        data: {
+          nome: String(data.get("nome") ?? ""),
+          email: String(data.get("email") ?? ""),
+          telefone: String(data.get("telefone") ?? ""),
+          mensagem: String(data.get("mensagem") ?? ""),
+          empresa: String(data.get("empresa") ?? ""),
+        },
+      });
+      setStatus("sent");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
