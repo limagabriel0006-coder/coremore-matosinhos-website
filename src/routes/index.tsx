@@ -734,7 +734,7 @@ function Testimonials() {
   const [active, setActive] = useState(0);
   const next = () => setActive((i) => (i + 1) % TESTIMONIALS.length);
   const prev = () => setActive((i) => (i - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
-  const current = TESTIMONIALS[active];
+  const current = TESTIMONIALS[active]!;
 
   return (
     <Section id="testemunhos" className="bg-cream">
