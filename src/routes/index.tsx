@@ -731,6 +731,10 @@ function Pricing() {
 }
 
 function Testimonials() {
+  const [active, setActive] = useState(0);
+  const next = () => setActive((i) => (i + 1) % TESTIMONIALS.length);
+  const prev = () => setActive((i) => (i - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+
   return (
     <Section id="testemunhos" className="bg-cream">
       <Reveal>
@@ -747,21 +751,51 @@ function Testimonials() {
           </div>
         </div>
       </Reveal>
-      <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {TESTIMONIALS.map((item, index) => (
-          <Reveal key={item.name} delay={index * 80}>
-            <figure className="flex h-full flex-col border border-border bg-card p-8">
-              <Stars />
-              <blockquote className="mt-5 flex-1 text-sm leading-relaxed text-muted-foreground">
-                “{item.text}”
-              </blockquote>
-              <figcaption className="mt-6 text-xs tracking-[0.16em] uppercase">
-                {item.name}
-              </figcaption>
-            </figure>
-          </Reveal>
-        ))}
-      </div>
+      <Reveal delay={100}>
+        <div className="relative mx-auto mt-14 max-w-3xl">
+          <figure className="flex min-h-[260px] flex-col items-center border border-border bg-card px-8 py-10 text-center sm:px-12">
+            <Stars />
+            <blockquote className="mt-6 flex-1 text-base leading-relaxed text-muted-foreground sm:text-lg">
+              “{TESTIMONIALS[active].text}”
+            </blockquote>
+            <figcaption className="mt-8 text-xs tracking-[0.16em] uppercase">
+              {TESTIMONIALS[active].name}
+            </figcaption>
+          </figure>
+          <div className="mt-6 flex items-center justify-center gap-4">
+            <button
+              type="button"
+              onClick={prev}
+              aria-label="Testemunho anterior"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-foreground transition-colors hover:bg-muted"
+            >
+              <ChevronLeft className="size-5" />
+            </button>
+            <div className="flex gap-2">
+              {TESTIMONIALS.map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setActive(i)}
+                  aria-label={`Ver testemunho ${i + 1}`}
+                  className={cn(
+                    "h-2.5 w-2.5 rounded-full transition-colors",
+                    i === active ? "bg-foreground" : "bg-border hover:bg-muted-foreground/40"
+                  )}
+                />
+              ))}
+            </div>
+            <button
+              type="button"
+              onClick={next}
+              aria-label="Testemunho seguinte"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-foreground transition-colors hover:bg-muted"
+            >
+              <ChevronRight className="size-5" />
+            </button>
+          </div>
+        </div>
+      </Reveal>
     </Section>
   );
 }
