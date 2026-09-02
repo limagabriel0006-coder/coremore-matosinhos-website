@@ -101,7 +101,7 @@ function ContactNotification({
 export const template = {
   component: ContactNotification,
   subject: (data: Record<string, any>) =>
-    `Novo pedido de marcação${data.name ? ` · ${data.name}` : ''}`,
+    `Novo pedido de marcação${data["name"] ? ` · ${data["name"]}` : ""}`,
   displayName: 'Notificação de pedido de marcação',
   to: 'limagabriel.0006@gmail.com',
   previewData: {
