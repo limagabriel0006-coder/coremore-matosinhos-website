@@ -183,7 +183,8 @@ export function Footer() {
         <div className="text-sm text-muted-foreground">
           <p className="eyebrow">Horário</p>
           <p className="mt-4">Segunda a sexta feira: 08:00 às 20:00</p>
-          <p className="mt-2">Sábado e domingo: encerrado</p>
+          <p className="mt-2">Sábado: manhã</p>
+          <p className="mt-2">Domingo: encerrado</p>
           <p className="mt-4 text-xs leading-relaxed">
             Marcações obrigatórias. Número de vagas limitado por aula.
           </p>
