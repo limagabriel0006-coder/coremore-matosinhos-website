@@ -33,6 +33,7 @@ import galleryDetalhePega from "@/assets/gallery/estudio-detalhe-pega.jpeg.asset
 import galleryDetalheMolas from "@/assets/gallery/estudio-detalhe-molas.jpeg.asset.json";
 import galleryAcessoriosCesto from "@/assets/gallery/estudio-acessorios-cesto.jpeg.asset.json";
 import galleryRecepcao from "@/assets/gallery/estudio-recepcao-armario.jpeg.asset.json";
+import filipaPhoto from "@/assets/team/filipa-leal.jpeg.asset.json";
 import ivaPhoto from "@/assets/team/iva-sousa.png.asset.json";
 import marisaPhoto from "@/assets/team/marisa-teixeira.jpeg.asset.json";
 import {
@@ -283,6 +284,7 @@ const TEAM = [
     name: "Filipa Leal",
     role: "Proprietária",
     bio: "Filipa Leal, proprietária do Core&More, licenciada em Fisioterapia desde 2011, trabalhou durante alguns anos na área de Fisioterapia Dermato-funcional e em Músculo-esquelética. Dedica-se no presente às aulas de Pilates, tendo formação em Pilates clássico pela Uno Pilates e Pilates clínico. É formadora de Pilates clínico pela APPI, na Bwizer.",
+    photo: filipaPhoto.url,
   },
   {
     name: "Marisa Teixeira",
