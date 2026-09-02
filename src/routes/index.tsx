@@ -734,6 +734,7 @@ function Testimonials() {
   const [active, setActive] = useState(0);
   const next = () => setActive((i) => (i + 1) % TESTIMONIALS.length);
   const prev = () => setActive((i) => (i - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+  const current = TESTIMONIALS[active] ?? TESTIMONIALS[0];
 
   return (
     <Section id="testemunhos" className="bg-cream">
@@ -756,10 +757,10 @@ function Testimonials() {
           <figure className="flex min-h-[260px] flex-col items-center border border-border bg-card px-8 py-10 text-center sm:px-12">
             <Stars />
             <blockquote className="mt-6 flex-1 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              “{TESTIMONIALS[active].text}”
+              “{current.text}”
             </blockquote>
             <figcaption className="mt-8 text-xs tracking-[0.16em] uppercase">
-              {TESTIMONIALS[active].name}
+              {current.name}
             </figcaption>
           </figure>
           <div className="mt-6 flex items-center justify-center gap-4">
