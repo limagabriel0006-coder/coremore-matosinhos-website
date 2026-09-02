@@ -1021,17 +1021,44 @@ function Contacts() {
               </div>
             </div>
 
+            <div className="hidden" aria-hidden="true">
+              <label htmlFor="empresa">Empresa</label>
+              <input
+                id="empresa"
+                name="empresa"
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
+
             <button
               type="submit"
-              className="mt-8 w-full rounded-sm bg-primary px-8 py-4 text-xs tracking-[0.18em] uppercase text-primary-foreground transition-opacity hover:opacity-90"
+              disabled={status === "sending"}
+              className="mt-8 flex w-full items-center justify-center gap-2 rounded-sm bg-primary px-8 py-4 text-xs tracking-[0.18em] uppercase text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
             >
-              Enviar pedido
+              {status === "sending" ? (
+                <>
+                  <Loader2 className="size-4 animate-spin" />
+                  A enviar...
+                </>
+              ) : (
+                "Enviar pedido"
+              )}
             </button>
 
-            {sent ? (
+            {status === "sent" ? (
               <p className="mt-5 border border-border bg-accent/60 p-4 text-sm text-accent-foreground">
-                Obrigado pelo teu contacto. Para uma resposta mais rápida, fala
+                Obrigado pelo teu contacto. Enviámos-te um email de confirmação
+                e respondemos em breve. Para uma resposta mais rápida, fala
                 connosco também pelo WhatsApp.
+              </p>
+            ) : null}
+
+            {status === "error" ? (
+              <p className="mt-5 border border-border bg-accent/60 p-4 text-sm text-accent-foreground">
+                Não foi possível enviar o teu pedido. Tenta novamente ou fala
+                connosco pelo WhatsApp.
               </p>
             ) : null}
           </form>
