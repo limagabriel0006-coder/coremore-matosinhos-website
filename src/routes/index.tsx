@@ -138,6 +138,8 @@ const PLANS = [
   { name: "PT - 3x/semana", price: "390€" },
   { name: "PT DUO - 1x/semana", price: "120€" },
   { name: "PT DUO - 2x/semana", price: "190€" },
+  { name: "Grupo equipamentos - 1x/semana", price: "80€" },
+  { name: "Grupo equipamentos - 2x/semana", price: "150€" },
   { name: "Pack Individual 5x", price: "220€" },
   { name: "Pack Individual 10x", price: "420€" },
   { name: "Pack Duo 5x", price: "150€" },
@@ -146,6 +148,7 @@ const PLANS = [
   { name: "Matwork 2x/semana", price: "70€" },
   { name: "Aula avulso", price: "45€" },
   { name: "Aula experimental", price: "20€" },
+  { name: "Aula grupo experimental", price: "15€" },
 ];
 
 const TESTIMONIALS = [
