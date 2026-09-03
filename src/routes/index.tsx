@@ -116,7 +116,13 @@ const CLASSES = [
     name: "Aulas com aparelhos",
     level: "Todos os níveis",
     duration: "50 minutos",
-    text: "As aulas de equipamentos são realizadas em aparelhos como o reformer, cadillac ou wunda chair. São aulas dinâmicas, adaptadas a cada indivíduo, cujo objetivo passa por fortalecer o centro e as extremidades, melhorar a flexibilidade e tonificar o corpo de forma generalizada.",
+    text: "As aulas de equipamentos são realizadas em aparelhos como o Reformer, Cadillac ou Wunda Chair. São aulas dinâmicas, adaptadas a cada indivíduo, cujo objetivo passa por fortalecer o centro e as extremidades, melhorar a flexibilidade e tonificar o corpo de forma generalizada.",
+  },
+  {
+    name: "Aulas grupo equipamentos",
+    level: "Todos os níveis",
+    duration: "50 minutos",
+    text: "Aulas em grupo reduzidos, onde a utilização do estúdio é partilhada por 3 alunos (limite máximo), sendo a aula orientada individualmente e cada aluno realiza a aula nos equipamentos (Reformer, Cadillac ou Chair).",
   },
   {
     name: "Aulas de matwork",
@@ -132,6 +138,8 @@ const PLANS = [
   { name: "PT - 3x/semana", price: "390€" },
   { name: "PT DUO - 1x/semana", price: "120€" },
   { name: "PT DUO - 2x/semana", price: "190€" },
+  { name: "Grupo equipamentos - 1x/semana", price: "80€" },
+  { name: "Grupo equipamentos - 2x/semana", price: "150€" },
   { name: "Pack Individual 5x", price: "220€" },
   { name: "Pack Individual 10x", price: "420€" },
   { name: "Pack Duo 5x", price: "150€" },
@@ -140,6 +148,7 @@ const PLANS = [
   { name: "Matwork 2x/semana", price: "70€" },
   { name: "Aula avulso", price: "45€" },
   { name: "Aula experimental", price: "20€" },
+  { name: "Aula grupo experimental", price: "15€" },
 ];
 
 const TESTIMONIALS = [
@@ -168,11 +177,11 @@ const TESTIMONIALS = [
 const FAQS = [
   {
     q: "Preciso de ter experiência prévia para começar?",
-    a: "Não. Recebemos alunos sem qualquer experiência em Pilates. A primeira sessão serve para conhecer o seu corpo, o seu historial e os seus objetivos, e a partir daí construímos a progressão adequada.",
+    a: "Não. Recebemos alunos sem qualquer experiência em Pilates. A primeira sessão serve para conhecer o seu corpo, o seu historial e os seus objetivos, e a partir daí construímos um plano de treino com progressão adequada.",
   },
   {
     q: "O que devo trazer e vestir para a aula?",
-    a: "Roupa confortável que permita movimento e meias antiderrapantes. Traga também uma garrafa de água. Todo o restante equipamento e acessórios são disponibilizados pelo estúdio.",
+    a: "Roupa confortável que permita movimento e meias antiderrapantes. Temos água disponível. Todo o restante equipamento e acessórios são disponibilizados pelo estúdio.",
   },
   {
     q: "Como funciona a marcação e o cancelamento de aulas?",
@@ -184,7 +193,7 @@ const FAQS = [
   },
   {
     q: "O Pilates ajuda em problemas de coluna e postura?",
-    a: "Sim. O trabalho de estabilização do core, mobilidade da coluna e consciência postural é um dos pilares do método. As aulas são adaptadas ao seu quadro, com acompanhamento fisioterapêutico sempre que necessário.",
+    a: "Sim. O trabalho de estabilização do core, mobilidade da coluna e consciência corporal são alguns dos pilares do método. As aulas são adaptadas ao seu quadro, com acompanhamento fisioterapêutico sempre que necessário.",
   },
   {
     q: "Com que antecedência devo marcar a minha aula?",
@@ -347,18 +356,21 @@ function Hero() {
         <Reveal>
           <div className="max-w-2xl bg-background/85 p-8 backdrop-blur-sm sm:p-12">
             <p className="eyebrow">Pilates studio em Matosinhos</p>
-            <h1 className="mt-6 text-4xl leading-[1.1] sm:text-5xl md:text-6xl">
-              Fortalece o teu core.
+            <h1 className="mt-6 text-3xl leading-[1.2] sm:text-4xl md:text-5xl">
+              “Change happens through movement
               <br />
-              Reencontra o teu equilíbrio.
+              and movement heals”
+              <span className="mt-3 block text-lg font-light not-italic text-foreground/70 sm:text-xl">
+                Joseph Pilates
+              </span>
             </h1>
-            <p className="mt-4 text-lg font-light italic text-foreground/80">
+            <p className="mt-6 text-lg font-light italic text-foreground/80">
               Fortalecer a partir do core.
             </p>
             <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground">
-              Um estúdio intimista de Pilates clássico e matwork em Matosinhos, com
-              turmas reduzidas, equipamento profissional e acompanhamento próximo em
-              cada movimento.
+              Um estúdio intimista de Pilates clássico em Matosinhos, com turmas
+              reduzidas, equipamento profissional e acompanhamento próximo em cada
+              movimento.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a
@@ -394,8 +406,9 @@ function About() {
             <p>
               O Core&amp;More nasceu do desejo de criar um espaço onde o Pilates é
               praticado como foi pensado: com método, precisão e presença. Trabalhamos
-              o método clássico, no Reformer e em matwork, com uma abordagem que
-              respeita o corpo de cada aluno e a sua história.
+              com o método Pilates nos equipamentos criados pelo autor deste método de
+              treino, Joseph Pilates, com uma abordagem que respeita o corpo de cada
+              aluno e a sua história.
             </p>
             <p>
               Abrimos portas a 3 de novembro de 2025, com um estúdio novo, acolhedor e
@@ -409,7 +422,7 @@ function About() {
           </div>
           <ul className="mt-8 space-y-3 text-sm text-foreground">
             {[
-              "Método Pilates clássico e matwork",
+              "Pilates clássico: equipamentos e matwork",
               "Turmas reduzidas e acompanhamento individualizado",
               "Acompanhamento com olhar fisioterapêutico",
               "Equipamento profissional completo",
@@ -566,7 +579,7 @@ function Studio() {
         <SectionHeading
           eyebrow="O estúdio"
           title="Um espaço acolhedor, pensado ao detalhe"
-          intro="Chão em madeira clara, espelhos amplos, plantas e cestos em rattan com acessórios. Um ambiente studio com equipamento profissional: Reformer, Cadillac, Barrel, Chair e Ladder Barrel."
+          intro="Chão em madeira clara, espelhos amplos, plantas e cestos em rattan com acessórios. Um ambiente studio com equipamento profissional: Reformer, Cadillac, Eletric Chair, Wunda Chair, Ladder Barrel, Small Barrel, Spine Corrector e Foot Corrector."
         />
       </Reveal>
       <StudioGallery />
@@ -690,6 +703,9 @@ function Pricing() {
       </div>
       <p className="mt-4 text-center text-xs text-muted-foreground">
         Todos os preços são por pessoa.
+      </p>
+      <p className="mt-2 text-center text-xs text-muted-foreground">
+        * Ao valor da mensalidade ou pack acrece o valor do seguro de danos pessoais anual: 7,5€.
       </p>
       <Reveal delay={120}>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
