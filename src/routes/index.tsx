@@ -356,18 +356,21 @@ function Hero() {
         <Reveal>
           <div className="max-w-2xl bg-background/85 p-8 backdrop-blur-sm sm:p-12">
             <p className="eyebrow">Pilates studio em Matosinhos</p>
-            <h1 className="mt-6 text-4xl leading-[1.1] sm:text-5xl md:text-6xl">
-              Fortalece o teu core.
+            <h1 className="mt-6 text-3xl leading-[1.2] sm:text-4xl md:text-5xl">
+              “Change happens through movement
               <br />
-              Reencontra o teu equilíbrio.
+              and movement heals”
+              <span className="mt-3 block text-lg font-light not-italic text-foreground/70 sm:text-xl">
+                Joseph Pilates
+              </span>
             </h1>
-            <p className="mt-4 text-lg font-light italic text-foreground/80">
+            <p className="mt-6 text-lg font-light italic text-foreground/80">
               Fortalecer a partir do core.
             </p>
             <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground">
-              Um estúdio intimista de Pilates clássico e matwork em Matosinhos, com
-              turmas reduzidas, equipamento profissional e acompanhamento próximo em
-              cada movimento.
+              Um estúdio intimista de Pilates clássico em Matosinhos, com turmas
+              reduzidas, equipamento profissional e acompanhamento próximo em cada
+              movimento.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a
