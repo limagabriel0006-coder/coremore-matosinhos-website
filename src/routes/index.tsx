@@ -406,8 +406,9 @@ function About() {
             <p>
               O Core&amp;More nasceu do desejo de criar um espaço onde o Pilates é
               praticado como foi pensado: com método, precisão e presença. Trabalhamos
-              o método clássico, no Reformer e em matwork, com uma abordagem que
-              respeita o corpo de cada aluno e a sua história.
+              com o método Pilates nos equipamentos criados pelo autor deste método de
+              treino, Joseph Pilates, com uma abordagem que respeita o corpo de cada
+              aluno e a sua história.
             </p>
             <p>
               Abrimos portas a 3 de novembro de 2025, com um estúdio novo, acolhedor e
