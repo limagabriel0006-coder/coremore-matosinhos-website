@@ -704,6 +704,9 @@ function Pricing() {
       <p className="mt-4 text-center text-xs text-muted-foreground">
         Todos os preços são por pessoa.
       </p>
+      <p className="mt-2 text-center text-xs text-muted-foreground">
+        * Ao valor da mensalidade ou pack acrece o valor do seguro de danos pessoais anual: 7,5€.
+      </p>
       <Reveal delay={120}>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           <div className="border border-border bg-card p-8">
