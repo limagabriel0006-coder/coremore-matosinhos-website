@@ -422,7 +422,7 @@ function About() {
           </div>
           <ul className="mt-8 space-y-3 text-sm text-foreground">
             {[
-              "Método Pilates clássico e matwork",
+              "Pilates clássico: equipamentos e matwork",
               "Turmas reduzidas e acompanhamento individualizado",
               "Acompanhamento com olhar fisioterapêutico",
               "Equipamento profissional completo",
