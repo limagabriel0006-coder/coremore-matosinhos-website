@@ -177,11 +177,11 @@ const TESTIMONIALS = [
 const FAQS = [
   {
     q: "Preciso de ter experiência prévia para começar?",
-    a: "Não. Recebemos alunos sem qualquer experiência em Pilates. A primeira sessão serve para conhecer o seu corpo, o seu historial e os seus objetivos, e a partir daí construímos a progressão adequada.",
+    a: "Não. Recebemos alunos sem qualquer experiência em Pilates. A primeira sessão serve para conhecer o seu corpo, o seu historial e os seus objetivos, e a partir daí construímos um plano de treino com progressão adequada.",
   },
   {
     q: "O que devo trazer e vestir para a aula?",
-    a: "Roupa confortável que permita movimento e meias antiderrapantes. Traga também uma garrafa de água. Todo o restante equipamento e acessórios são disponibilizados pelo estúdio.",
+    a: "Roupa confortável que permita movimento e meias antiderrapantes. Temos água disponível. Todo o restante equipamento e acessórios são disponibilizados pelo estúdio.",
   },
   {
     q: "Como funciona a marcação e o cancelamento de aulas?",
@@ -193,7 +193,7 @@ const FAQS = [
   },
   {
     q: "O Pilates ajuda em problemas de coluna e postura?",
-    a: "Sim. O trabalho de estabilização do core, mobilidade da coluna e consciência postural é um dos pilares do método. As aulas são adaptadas ao seu quadro, com acompanhamento fisioterapêutico sempre que necessário.",
+    a: "Sim. O trabalho de estabilização do core, mobilidade da coluna e consciência corporal são alguns dos pilares do método. As aulas são adaptadas ao seu quadro, com acompanhamento fisioterapêutico sempre que necessário.",
   },
   {
     q: "Com que antecedência devo marcar a minha aula?",
