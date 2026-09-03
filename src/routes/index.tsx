@@ -116,7 +116,13 @@ const CLASSES = [
     name: "Aulas com aparelhos",
     level: "Todos os níveis",
     duration: "50 minutos",
-    text: "As aulas de equipamentos são realizadas em aparelhos como o reformer, cadillac ou wunda chair. São aulas dinâmicas, adaptadas a cada indivíduo, cujo objetivo passa por fortalecer o centro e as extremidades, melhorar a flexibilidade e tonificar o corpo de forma generalizada.",
+    text: "As aulas de equipamentos são realizadas em aparelhos como o Reformer, Cadillac ou Wunda Chair. São aulas dinâmicas, adaptadas a cada indivíduo, cujo objetivo passa por fortalecer o centro e as extremidades, melhorar a flexibilidade e tonificar o corpo de forma generalizada.",
+  },
+  {
+    name: "Aulas grupo equipamentos",
+    level: "Todos os níveis",
+    duration: "50 minutos",
+    text: "Aulas em grupo reduzidos, onde a utilização do estúdio é partilhada por 3 alunos (limite máximo), sendo a aula orientada individualmente e cada aluno realiza a aula nos equipamentos (Reformer, Cadillac ou Chair).",
   },
   {
     name: "Aulas de matwork",
