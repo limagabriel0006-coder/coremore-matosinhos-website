@@ -138,7 +138,7 @@ const PLANS = [
   { name: "PT - 3x/semana", price: "390€" },
   { name: "PT DUO - 1x/semana", price: "120€" },
   { name: "PT DUO - 2x/semana", price: "190€" },
-  { name: "Grupo equipamentos - 1x/semana", price: "80€" },
+  { name: "Grupo equipamentos - 1x/semana", price: "85€" },
   { name: "Grupo equipamentos - 2x/semana", price: "150€" },
   { name: "Pack Individual 5x", price: "220€" },
   { name: "Pack Individual 10x", price: "420€" },
@@ -291,7 +291,7 @@ const GALLERY = [
 const TEAM = [
   {
     name: "Filipa Leal",
-    role: "Proprietária",
+    role: "Fisioterapeuta e instrutora/formadora de Pilates",
     bio: "Filipa Leal, proprietária do Core&More, licenciada em Fisioterapia desde 2011, trabalhou durante alguns anos na área de Fisioterapia Dermato-funcional e em Músculo-esquelética. Dedica-se no presente às aulas de Pilates, tendo formação em Pilates clássico pela Uno Pilates e Pilates clínico. É formadora de Pilates clínico pela APPI, na Bwizer.",
     photo: filipaPhoto.url,
   },
@@ -424,7 +424,7 @@ function About() {
             {[
               "Pilates clássico: equipamentos e matwork",
               "Turmas reduzidas e acompanhamento individualizado",
-              "Acompanhamento com olhar fisioterapêutico",
+              "Pilates clínico e acompanhamento com olhar fisioterapêutico",
               "Equipamento profissional completo",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3">
@@ -579,7 +579,7 @@ function Studio() {
         <SectionHeading
           eyebrow="O estúdio"
           title="Um espaço acolhedor, pensado ao detalhe"
-          intro="Chão em madeira clara, espelhos amplos, plantas e cestos em rattan com acessórios. Um ambiente studio com equipamento profissional: Reformer, Cadillac, Eletric Chair, Wunda Chair, Ladder Barrel, Small Barrel, Spine Corrector e Foot Corrector."
+          intro="Chão em madeira clara, espelhos amplos, plantas e cestos em rattan com acessórios. Um ambiente studio com equipamento profissional: Reformer, Cadillac, Eletric Chair, Wunda Chair, Ladder Barrel, Small Barrel, Spine Corrector, Foot Corrector e Pedi Pole."
         />
       </Reveal>
       <StudioGallery />
