@@ -400,7 +400,7 @@ function About() {
         <Reveal>
           <p className="eyebrow">Sobre nós</p>
           <h2 className="mt-4 text-3xl leading-[1.15] sm:text-4xl md:text-[2.75rem]">
-            Qualidade acima de quantidade, sempre.
+            Qualidade em cada gesto.
           </h2>
           <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
@@ -579,7 +579,7 @@ function Studio() {
         <SectionHeading
           eyebrow="O estúdio"
           title="Um espaço acolhedor, pensado ao detalhe"
-          intro="Chão em madeira clara, espelhos amplos, plantas e cestos em rattan com acessórios. Um ambiente studio com equipamento profissional: Reformer, Cadillac, Eletric Chair, Wunda Chair, Ladder Barrel, Small Barrel, Spine Corrector, Foot Corrector e Pedi Pole."
+          intro="Chão em madeira clara, espelhos amplos, plantas e cestos em rattan com acessórios. Um estúdio com equipamento profissional: Reformer, Cadillac, Eletric Chair, Wunda Chair, Ladder Barrel, Small Barrel, Spine Corrector, Foot Corrector e Pedi Pole."
         />
       </Reveal>
       <StudioGallery />
@@ -705,7 +705,7 @@ function Pricing() {
         Todos os preços são por pessoa.
       </p>
       <p className="mt-2 text-center text-xs text-muted-foreground">
-        * Ao valor da mensalidade ou pack acrece o valor do seguro de danos pessoais anual: 7,5€.
+        * Ao valor da mensalidade ou pack acresce o valor do seguro de danos pessoais anual: 7,5€.
       </p>
       <Reveal delay={120}>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
