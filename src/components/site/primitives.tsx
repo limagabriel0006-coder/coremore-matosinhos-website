@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 export const WHATSAPP_NUMBER = "351914409173";
 export const WHATSAPP_MESSAGE =
-  "Olá, Core&More Pilates! 😊 Vi as informações na vossa página e gostaria de esclarecer uma dúvida. Podem ajudar-me?";
+  "Olá, Core&More Pilates! Vi as informações na vossa página e gostaria de esclarecer uma dúvida. Podem ajudar-me?";
 
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_MESSAGE,
